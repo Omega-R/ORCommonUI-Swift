@@ -35,5 +35,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'ORCommonCode-Swift', '~> 0.3.0'
+  s.dependency 'ORCommonCode-Swift', '~> 0.3.1'
 end
