@@ -13,7 +13,7 @@ public class ORButtonWithUnderline : UIButton {
     @IBInspectable var underlineThickness: CGFloat = 1
     @IBInspectable var underlineOffset: CGFloat = 1
 
-    @IBInspectable var underlineHidden: Bool = false {
+    @IBInspectable public var underlineHidden: Bool = false {
         didSet {
             if underlineView != nil {
                 underlineView.hidden = underlineHidden
