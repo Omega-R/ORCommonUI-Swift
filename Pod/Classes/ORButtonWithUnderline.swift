@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ORButtonWithUnderline : UIButton {
+public class ORButtonWithUnderline : UIButton {
     
     @IBInspectable var underlineThickness: CGFloat = 1
     @IBInspectable var underlineOffset: CGFloat = 1
@@ -23,7 +23,7 @@ class ORButtonWithUnderline : UIButton {
     
     weak var underlineView: UIView!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
         clipsToBounds = false
@@ -34,7 +34,7 @@ class ORButtonWithUnderline : UIButton {
         underlineView.hidden = underlineHidden
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         if underlineView != nil {

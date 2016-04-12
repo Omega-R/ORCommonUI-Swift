@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ORDependentOnScreenScaleSeparator: UIImageView {
+public class ORDependentOnScreenScaleSeparator: UIImageView {
 
     @IBInspectable var affectWidth: Bool = false
     @IBInspectable var affectHeight: Bool = false
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
         for constraint in constraints {

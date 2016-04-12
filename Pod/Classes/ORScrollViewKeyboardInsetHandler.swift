@@ -9,7 +9,7 @@
 import UIKit
 import ORCommonCode_Swift
 
-class ORScrollViewKeyboardInsetHandler : UIView {
+public class ORScrollViewKeyboardInsetHandler : UIView {
 
     weak var scrollView: UIScrollView!
     
@@ -17,7 +17,7 @@ class ORScrollViewKeyboardInsetHandler : UIView {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
         hidden = true
