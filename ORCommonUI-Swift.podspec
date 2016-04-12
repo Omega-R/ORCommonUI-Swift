@@ -9,21 +9,20 @@
 Pod::Spec.new do |s|
   s.name             = "ORCommonUI-Swift"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ORCommonUI-Swift."
+  s.summary          = "ORCommonUI-Swift - UI extensions, custom views, controllers."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+  s.description      = "ORScrollViewKeyboardInsetHandler, ORKeyboardLayoutConstraint, ORDependentOnScreenScaleSeparator etc."
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ORCommonUI-Swift"
+  s.homepage         = "https://bitbucket.org/omegarinc/orcommonui-swift"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Maxim Soloviev" => "maxim@omega-r.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/ORCommonUI-Swift.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://bitbucket.org/omegarinc/orcommonui-swift.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
@@ -35,6 +34,6 @@ Pod::Spec.new do |s|
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
+  s.dependency 'ORCommonCode-Swift', '~> 0.2.1'
 end

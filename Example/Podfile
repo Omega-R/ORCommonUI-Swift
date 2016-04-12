@@ -1,4 +1,6 @@
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://bitbucket.org/omegarinc/cocoapods-specs.git' # private spec repo
+source 'https://github.com/CocoaPods/Specs.git' # master cocoapods spec repo
+
 use_frameworks!
 
 target 'ORCommonUI-Swift_Example', :exclusive => true do
@@ -8,5 +10,6 @@ end
 target 'ORCommonUI-Swift_Tests', :exclusive => true do
   pod 'ORCommonUI-Swift', :path => '../'
 
-  
+pod 'ORCommonCode-Swift', '~> 0.2.1'
+
 end
