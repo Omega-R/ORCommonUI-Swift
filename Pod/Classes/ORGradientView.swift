@@ -11,8 +11,8 @@ import UIKit
 
 public class ORGradientView: UIView {
     
-    @IBInspectable var colorTop: UIColor = UIColor.redColor()
-    @IBInspectable var colorBottom: UIColor = UIColor.blueColor()
+    @IBInspectable public var colorTop: UIColor = UIColor.redColor()
+    @IBInspectable public var colorBottom: UIColor = UIColor.blueColor()
     
     // MARK: - View lifecycle
     
