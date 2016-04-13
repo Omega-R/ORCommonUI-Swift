@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import ORCommonUI-Swift
+import ORCommonUI_Swift
 
 class Tests: XCTestCase {
     
