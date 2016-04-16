@@ -1,9 +1,9 @@
 //
 //  ORKeyboardLayoutConstraint.swift
-//  InMusik Explorer
+//  Pods
 //
 //  Created by Alexander Kurbanov on 4/5/16.
-//  Copyright © 2016 Stone Valley Partners. All rights reserved.
+//  
 //
 
 import UIKit

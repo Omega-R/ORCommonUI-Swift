@@ -1,33 +1,37 @@
 //
-//  ORScrollViewKeyboardInsetHandler.swift
-//  Dowoodle
+//  UIScrollView+KeyboardInsetHandler.swift
+//  Pods
 //
-//  Created by Maxim Soloviev on 12/04/16.
-//  Copyright © 2016 YPSOURCE. All rights reserved.
+//  Created by Maxim Soloviev on 16/04/16.
+//
 //
 
 import UIKit
 import ORCommonCode_Swift
 
 public class ORScrollViewKeyboardInsetHandler : UIView {
-
+    
     weak var scrollView: UIScrollView!
     
+    init(scrollView: UIScrollView) {
+        self.scrollView = scrollView
+
+        super.init(frame: CGRectZero)
+        
+        scrollView.addSubview(self)
+
+        hidden = true
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationKeyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationKeyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+    }
+
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-    
-    override public func awakeFromNib() {
-        super.awakeFromNib()
-        
-        hidden = true
-        
-        if superview != nil && superview is UIScrollView {
-            scrollView = superview as! UIScrollView
-            
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationKeyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationKeyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
-        }
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     func notificationKeyboardWillShow(notification: NSNotification) {
@@ -56,12 +60,11 @@ public class ORScrollViewKeyboardInsetHandler : UIView {
             })
         }
     }
-    
-//    override func prepareForInterfaceBuilder() {
-//        backgroundColor = UIColor.clearColor()
-//        
-//        let lbl = UILabel(frame: bounds)
-//        lbl.text = "Non visual component"
-//        addSubview(lbl)
-//    }
+}
+
+extension UIScrollView {
+
+    public func or_enableKeyboardInsetHandling() {
+        _ = ORScrollViewKeyboardInsetHandler(scrollView: self)
+    }
 }
