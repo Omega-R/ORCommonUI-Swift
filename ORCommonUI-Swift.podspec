@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ORCommonUI-Swift"
-  s.version          = "0.4.2"
+  s.version          = "0.4.3"
   s.summary          = "ORCommonUI-Swift - UI extensions, custom views, controllers."
 
 # This description is used to generate tags and improve search results.
@@ -35,5 +35,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'ORCommonCode-Swift', '~> 0.3.1'
+  s.dependency 'ORCommonCode-Swift', '>= 0.3.1'
 end
