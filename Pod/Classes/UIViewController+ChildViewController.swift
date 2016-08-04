@@ -10,13 +10,11 @@ import UIKit
 
 extension UIViewController {
     
-    public func or_addChildViewController(childVC: UIViewController, intoView containerView: UIView? = nil) {
+    public func or_addChildViewController(childVC: UIViewController, intoView containerView: UIView) {
         addChildViewController(childVC)
         
-        let parentView: UIView = containerView ?? self.view
-        
-        childVC.view.frame = parentView.frame
-        parentView.addSubview(childVC.view)
+        childVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(containerView.frame), CGRectGetHeight(containerView.frame))
+        containerView.addSubview(childVC.view)
         childVC.didMoveToParentViewController(self)
     }
     
