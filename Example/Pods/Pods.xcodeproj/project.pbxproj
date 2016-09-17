@@ -507,20 +507,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					5EB25C3A818BF0BB830B4D1F907F1696 = {
-						LastSwiftMigration = 0800;
-					};
-					7F99573C7BCE94719CB47870A2133F3E = {
-						LastSwiftMigration = 0800;
-					};
-					968C6ABA19E802FD1DBC348892F6FBAD = {
-						LastSwiftMigration = 0800;
-					};
-					E2C31B24B36D751D37FDA2F2F3893F98 = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -658,6 +644,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		06A069D71B9DE6B583BD92C4C7D5C374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1811ACA73A0225828E3AF68292969428 /* ORCommonCode-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ORCommonCode-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ORCommonCode_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0CD821CA5FA8369760067D3D297BA3CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A8488F9D06CC9C5EB7AFB85A0E1795C /* Pods-ORCommonUI-Swift_Example.debug.xcconfig */;
@@ -688,40 +706,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2E2C9678187C28125C1ED203E8565251 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 633EB7684AE3E5C198B7B3871F62CB03 /* ORCommonUI-Swift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ORCommonUI-Swift/ORCommonUI-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ORCommonUI-Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ORCommonUI-Swift/ORCommonUI-Swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ORCommonUI_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -774,14 +758,13 @@
 				PRODUCT_NAME = Pods_ORCommonUI_Swift_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		65CDFD488C8122907F2AA3DD6B59AC3B /* Release */ = {
+		5F7247034F7D9E12EFDB026BCB40B23B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 633EB7684AE3E5C198B7B3871F62CB03 /* ORCommonUI-Swift.xcconfig */;
 			buildSettings = {
@@ -813,7 +796,40 @@
 			};
 			name = Release;
 		};
-		71B88230CB2830DDA17536658EE03569 /* Release */ = {
+		76E739912665EC121C404033F403C8F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 633EB7684AE3E5C198B7B3871F62CB03 /* ORCommonUI-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ORCommonUI-Swift/ORCommonUI-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ORCommonUI-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ORCommonUI-Swift/ORCommonUI-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ORCommonUI_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E99E4D2FAEB9D86104549850BF78386 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1811ACA73A0225828E3AF68292969428 /* ORCommonCode-Swift.xcconfig */;
 			buildSettings = {
@@ -821,7 +837,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -834,16 +850,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ORCommonCode_Swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		858B90E9DD9D713F56CE553F6328B0C8 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -874,7 +891,6 @@
 				PRODUCT_NAME = Pods_ORCommonUI_Swift_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1012,40 +1028,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EF75FB2DC63ADAFFB32EC663E95A8C62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1811ACA73A0225828E3AF68292969428 /* ORCommonCode-Swift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ORCommonCode-Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ORCommonCode-Swift/ORCommonCode-Swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ORCommonCode_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1085,8 +1067,8 @@
 		7C3255BD6F33679D139B86A99A9002EE /* Build configuration list for PBXNativeTarget "ORCommonUI-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E2C9678187C28125C1ED203E8565251 /* Debug */,
-				65CDFD488C8122907F2AA3DD6B59AC3B /* Release */,
+				76E739912665EC121C404033F403C8F0 /* Debug */,
+				5F7247034F7D9E12EFDB026BCB40B23B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1103,8 +1085,8 @@
 		FF06239DF1AF5FE10C0FE52E91E0D9AF /* Build configuration list for PBXNativeTarget "ORCommonCode-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF75FB2DC63ADAFFB32EC663E95A8C62 /* Debug */,
-				71B88230CB2830DDA17536658EE03569 /* Release */,
+				7E99E4D2FAEB9D86104549850BF78386 /* Debug */,
+				06A069D71B9DE6B583BD92C4C7D5C374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
