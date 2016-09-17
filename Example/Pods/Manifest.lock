@@ -1,0 +1,18 @@
+PODS:
+  - ORCommonCode-Swift (0.3.1)
+  - ORCommonUI-Swift (0.7.1):
+    - ORCommonCode-Swift (>= 0.3.1)
+
+DEPENDENCIES:
+  - ORCommonCode-Swift (~> 0.3.1)
+  - ORCommonUI-Swift (from `../`)
+
+EXTERNAL SOURCES:
+  ORCommonUI-Swift:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ORCommonCode-Swift: df28c58faeb202b4373fb010a3cb644a3faa0e81
+  ORCommonUI-Swift: 61befc3eedc538692ac544e30e8dcda8899ccc5e
+
+COCOAPODS: 0.39.0

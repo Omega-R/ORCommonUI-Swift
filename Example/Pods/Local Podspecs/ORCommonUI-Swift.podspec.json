@@ -1,0 +1,32 @@
+{
+  "name": "ORCommonUI-Swift",
+  "version": "0.7.1",
+  "summary": "ORCommonUI-Swift - UI extensions, custom views, controllers.",
+  "description": "UIViewController+ChildViewController, UIScrollView+KeyboardInsetHandler, ORKeyboardLayoutConstraint, ORDependentOnScreenScaleSeparator, UIView+HideKeyboard, UIViewController+Alert, ORGradientView, ORRoundRectView/ORRoundRectButton, ORTopViewController (find topmost vc) etc.",
+  "homepage": "https://bitbucket.org/omegarinc/orcommonui-swift",
+  "license": "MIT",
+  "authors": {
+    "Maxim Soloviev": "maxim@omega-r.com",
+    "Alexander Kurbanov": "kurbanov.alex@omega-r.com"
+  },
+  "source": {
+    "git": "https://bitbucket.org/omegarinc/orcommonui-swift.git",
+    "tag": "0.7.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "ORCommonUI-Swift": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "ORCommonCode-Swift": [
+      ">= 0.3.1"
+    ]
+  }
+}
