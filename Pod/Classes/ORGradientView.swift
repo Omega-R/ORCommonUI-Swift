@@ -24,7 +24,13 @@ public class ORGradientView: UIView {
     // MARK: - Helpers
     
     public func setGradient(color1: UIColor, color2: UIColor) {
-        let context = UIGraphicsGetCurrentContext()
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
+        defer {
+            CGContextRestoreGState(context)
+        }
+        
         let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [color1.CGColor, color2.CGColor], [0, 1])!
         
         // Draw Path
@@ -32,6 +38,5 @@ public class ORGradientView: UIView {
         CGContextSaveGState(context)
         path.addClip()
         CGContextDrawLinearGradient(context, gradient, CGPointMake(frame.width / 2, 0), CGPointMake(frame.width / 2, frame.height), CGGradientDrawingOptions())
-        CGContextRestoreGState(context)
     }
 }
