@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    func or_setExclusiveTouchForViewAndSubviews(recursively recursively: Bool = false) {
+    public func or_setExclusiveTouchForViewAndSubviews(recursively recursively: Bool = false) {
         exclusiveTouch = true
         
         for v in subviews {
