@@ -3,7 +3,7 @@
 //  Pods
 //
 //  Created by Maxim Soloviev on 30/03/16.
-//  
+//  Copyright © 2016 Maxim Soloviev. All rights reserved.
 //
 
 import UIKit

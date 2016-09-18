@@ -1,6 +1,6 @@
 PODS:
   - ORCommonCode-Swift (0.3.1)
-  - ORCommonUI-Swift (0.8.0):
+  - ORCommonUI-Swift (0.9.0):
     - ORCommonCode-Swift (>= 0.3.1)
 
 DEPENDENCIES:
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ORCommonCode-Swift: df28c58faeb202b4373fb010a3cb644a3faa0e81
-  ORCommonUI-Swift: c95451c24d374e42ba8a8f1c1c09902b282fa08a
+  ORCommonUI-Swift: 796437a7f61f96b82e3bf7d06f21cd8840bee366
 
 PODFILE CHECKSUM: b5c20a2c16545d667c9c9815321c865d8016d0fe
 
