@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ORCommonCode_Swift
 
 public class ORScrollViewKeyboardInsetHandler : UIView {
     
@@ -49,7 +48,7 @@ public class ORScrollViewKeyboardInsetHandler : UIView {
     }
     
     func notificationKeyboardWillHide(notification: NSNotification) {
-        or_dispatch_in_main_queue_after(0.1) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { 
             UIView.animateWithDuration(0.3, animations: { [weak self] in
                 if let scrollView = self?.scrollView {
                     let currentInsets = scrollView.contentInset
