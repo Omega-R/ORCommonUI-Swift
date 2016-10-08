@@ -9,35 +9,35 @@
 import UIKit
 import ORCommonCode_Swift
 
-public class ORScrollViewKeyboardInsetHandler : UIView {
+open class ORScrollViewKeyboardInsetHandler : UIView {
     
     weak var scrollView: UIScrollView!
     
     init(scrollView: UIScrollView) {
         self.scrollView = scrollView
 
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         
         scrollView.addSubview(self)
 
-        hidden = true
+        isHidden = true
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationKeyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationKeyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func notificationKeyboardWillShow(notification: NSNotification) {
-        if let userInfo = notification.userInfo {
+    func notificationKeyboardWillShow(_ notification: Notification) {
+        if let userInfo = (notification as NSNotification).userInfo {
             if let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-                let frame = frameValue.CGRectValue()
+                let frame = frameValue.cgRectValue
                 let kbSize = frame.size
                 
                 let currentInsets = scrollView.contentInset
@@ -48,9 +48,9 @@ public class ORScrollViewKeyboardInsetHandler : UIView {
         }
     }
     
-    func notificationKeyboardWillHide(notification: NSNotification) {
+    func notificationKeyboardWillHide(_ notification: Notification) {
         or_dispatch_in_main_queue_after(0.1) {
-            UIView.animateWithDuration(0.3, animations: { [weak self] in
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
                 if let scrollView = self?.scrollView {
                     let currentInsets = scrollView.contentInset
                     let contentInsets = UIEdgeInsetsMake(currentInsets.top, currentInsets.left, 0, currentInsets.right)

@@ -10,12 +10,12 @@ import UIKit
 
 extension UIViewController {
     
-    public typealias ActionBlock = (action: UIAlertAction) -> Void
+    public typealias ActionBlock = (_ action: UIAlertAction) -> Void
     
-    public func or_showAlert(title title: String?, message: String, buttonTitle: String = "OK", actionBlock: ActionBlock? = nil) {
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alertVC.addAction(UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.Cancel, handler: actionBlock))
+    public func or_showAlert(title: String?, message: String, buttonTitle: String = "OK", actionBlock: ActionBlock? = nil) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertVC.addAction(UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.cancel, handler: actionBlock))
         
-        presentViewController(alertVC, animated: true, completion: nil)
+        present(alertVC, animated: true, completion: nil)
     }
 }

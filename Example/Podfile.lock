@@ -1,10 +1,10 @@
 PODS:
-  - ORCommonCode-Swift (0.3.1)
-  - ORCommonUI-Swift (0.9.3):
-    - ORCommonCode-Swift (>= 0.3.1)
+  - ORCommonCode-Swift (3.0.0)
+  - ORCommonUI-Swift (3.0.0):
+    - ORCommonCode-Swift (>= 3.0.0)
 
 DEPENDENCIES:
-  - ORCommonCode-Swift (~> 0.3.1)
+  - ORCommonCode-Swift (~> 3.0.0)
   - ORCommonUI-Swift (from `../`)
 
 EXTERNAL SOURCES:
@@ -12,9 +12,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ORCommonCode-Swift: df28c58faeb202b4373fb010a3cb644a3faa0e81
-  ORCommonUI-Swift: c28f040ed284cf23d3bf1650a8b8da58c8ec8aba
+  ORCommonCode-Swift: 31f2491439cd7ff28dcc42c1ee1ce37adaca77d5
+  ORCommonUI-Swift: f851b760538670d2d860d3bcd1a0d74b12151ec8
 
-PODFILE CHECKSUM: b5c20a2c16545d667c9c9815321c865d8016d0fe
+PODFILE CHECKSUM: 73c4088ac5bf90e5bed4a86724aed8c8fe4d1f7a
 
 COCOAPODS: 1.1.0.rc.2

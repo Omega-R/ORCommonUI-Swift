@@ -8,22 +8,22 @@
 
 import UIKit
 
-public class ORDependentOnScreenScaleSeparator: UIImageView {
+open class ORDependentOnScreenScaleSeparator: UIImageView {
 
     @IBInspectable var affectWidth: Bool = false
     @IBInspectable var affectHeight: Bool = false
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         for constraint in constraints {
             // Set height of exactly one pixel if this view is using constraints
-            if affectWidth && constraint.firstAttribute == NSLayoutAttribute.Width {
-                constraint.constant /= UIScreen.mainScreen().scale
+            if affectWidth && constraint.firstAttribute == NSLayoutAttribute.width {
+                constraint.constant /= UIScreen.main.scale
             }
             
-            if affectHeight && constraint.firstAttribute == NSLayoutAttribute.Height {
-                constraint.constant /= UIScreen.mainScreen().scale
+            if affectHeight && constraint.firstAttribute == NSLayoutAttribute.height {
+                constraint.constant /= UIScreen.main.scale
             }
         }
     }

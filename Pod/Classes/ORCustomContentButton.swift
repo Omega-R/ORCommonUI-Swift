@@ -8,19 +8,19 @@
 
 import UIKit
 
-public class ORCustomContentButton: UIControl {
+open class ORCustomContentButton: UIControl {
 
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         
-        exclusiveTouch = true
+        isExclusiveTouch = true
     }
     
-    public override var highlighted: Bool {
+    open override var isHighlighted: Bool {
         didSet {
-            UIView.animateWithDuration(0.1) { _ in
-                self.alpha = self.highlighted ? 0.3 : 1.0
-            }
+            UIView.animate(withDuration: 0.1, animations: { _ in
+                self.alpha = self.isHighlighted ? 0.3 : 1.0
+            }) 
         }
     }
 }

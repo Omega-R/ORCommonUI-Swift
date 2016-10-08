@@ -8,18 +8,18 @@
 
 import UIKit
 
-public class ORRoundRectView : UIView {
+open class ORRoundRectView : UIView {
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         layer.cornerRadius = bounds.height / 2
     }
 }
 
-public class ORRoundRectButton : UIButton {
+open class ORRoundRectButton : UIButton {
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
 
         layer.cornerRadius = bounds.height / 2

@@ -8,30 +8,30 @@
 
 import UIKit
 
-public class ORKeyboardLayoutConstraint: NSLayoutConstraint {
+open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
     
-    private var originalOffset: CGFloat = 0
+    fileprivate var originalOffset: CGFloat = 0
     
     // MARK: - Object lifecycle
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         self.originalOffset = self.constant
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationKeyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationKeyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
  
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - NSNotification methods
     
-    func notificationKeyboardWillShow(notification: NSNotification) {
-        if let userInfo = notification.userInfo {
+    func notificationKeyboardWillShow(_ notification: Notification) {
+        if let userInfo = (notification as NSNotification).userInfo {
             if let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-                let frame = frameValue.CGRectValue()
+                let frame = frameValue.cgRectValue
                 self.constant = frame.size.height + self.originalOffset
                 
                 self.updateLayout(userInfo)
@@ -39,26 +39,26 @@ public class ORKeyboardLayoutConstraint: NSLayoutConstraint {
         }
     }
     
-    func notificationKeyboardWillHide(notification: NSNotification) {
+    func notificationKeyboardWillHide(_ notification: Notification) {
         self.constant = self.originalOffset
         
-        if let userInfo = notification.userInfo {
+        if let userInfo = (notification as NSNotification).userInfo {
             self.updateLayout(userInfo)
         }
     }
     
-    func updateLayout(userInfo: [NSObject : AnyObject]) {
-        if let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber, curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber {
-            UIView.animateWithDuration(
-                NSTimeInterval(duration.doubleValue),
+    func updateLayout(_ userInfo: [AnyHashable: Any]) {
+        if let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber, let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber {
+            UIView.animate(
+                withDuration: TimeInterval(duration.doubleValue),
                 delay: 0,
-                options: UIViewAnimationOptions(rawValue: curve.unsignedLongValue),
+                options: UIViewAnimationOptions(rawValue: curve.uintValue),
                 animations: {[weak self] in
                     var topView = self?.firstItem.superview! as UIView!
-                    while let superview = topView?.superview where !(superview is UIWindow) {
+                    while let superview = topView?.superview , !(superview is UIWindow) {
                         topView = superview
                     }
-                    topView.layoutIfNeeded()
+                    topView?.layoutIfNeeded()
                 },
                 completion: nil)
         }

@@ -8,28 +8,29 @@
 
 import UIKit
 
-@IBDesignable public class ORRadialGradientView: UIView {
+@IBDesignable open class ORRadialGradientView: UIView {
 
-    @IBInspectable public var innerColor: UIColor = UIColor.redColor().colorWithAlphaComponent(0)
-    @IBInspectable public var innerColorLocation: CGFloat = 0
-    @IBInspectable public var mediumColor: UIColor = UIColor.redColor().colorWithAlphaComponent(0.5)
-    @IBInspectable public var mediumColorLocation: CGFloat = 0.5
-    @IBInspectable public var outerColor: UIColor = UIColor.redColor()
-    @IBInspectable public var outerColorLocation: CGFloat = 1
+    @IBInspectable open var innerColor: UIColor = UIColor.red.withAlphaComponent(0)
+    @IBInspectable open var innerColorLocation: CGFloat = 0
+    @IBInspectable open var mediumColor: UIColor = UIColor.red.withAlphaComponent(0.5)
+    @IBInspectable open var mediumColorLocation: CGFloat = 0.5
+    @IBInspectable open var outerColor: UIColor = UIColor.red
+    @IBInspectable open var outerColorLocation: CGFloat = 1
     
-    public override func drawRect(rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else {
             return
         }
         defer {
-            CGContextRestoreGState(context)
+            context.restoreGState()
         }
 
-        CGContextSaveGState(context)
+        context.saveGState()
 
-        let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [innerColor.CGColor, mediumColor.CGColor, outerColor.CGColor], [innerColorLocation, mediumColorLocation, outerColorLocation])!
-        let gradCenter = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2)
+        let colors = [innerColor.cgColor, mediumColor.cgColor, outerColor.cgColor] as CFArray
+        let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: colors, locations: [innerColorLocation, mediumColorLocation, outerColorLocation])!
+        let gradCenter = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
         let gradRadius = min(bounds.size.width / 2, bounds.size.height / 2)
-        CGContextDrawRadialGradient(context, gradient, gradCenter, 0, gradCenter, gradRadius, CGGradientDrawingOptions.DrawsAfterEndLocation)
+        context.drawRadialGradient(gradient, startCenter: gradCenter, startRadius: 0, endCenter: gradCenter, endRadius: gradRadius, options: CGGradientDrawingOptions.drawsAfterEndLocation)
     }
 }

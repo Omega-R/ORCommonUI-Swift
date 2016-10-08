@@ -19,11 +19,11 @@ public protocol ORInterfaceOrientationRestrictor {
 //    return or_supportedInterfaceOrientations(or_topViewController())
 //}
 
-public func or_supportedInterfaceOrientations(vc: UIViewController?) -> UIInterfaceOrientationMask {
+public func or_supportedInterfaceOrientations(_ vc: UIViewController?) -> UIInterfaceOrientationMask {
     guard let vc = vc, let restrictor = vc as? ORInterfaceOrientationRestrictor else {
-        return UIApplication.sharedApplication().supportedInterfaceOrientationsForWindow(UIApplication.sharedApplication().keyWindow)
+        return UIApplication.shared.supportedInterfaceOrientations(for: UIApplication.shared.keyWindow)
     }
-    if vc.isBeingDismissed() {
+    if vc.isBeingDismissed {
         return or_supportedInterfaceOrientations(vc.presentingViewController)
     }
     return restrictor.supportedInterfaceOrientations()

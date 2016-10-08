@@ -9,25 +9,25 @@
 import Foundation
 import UIKit
 
-public class ORUserInteractionDisabler {
+open class ORUserInteractionDisabler {
     
-    public static let sharedInstance = ORUserInteractionDisabler()
-    private var enablingTimer: NSTimer?
+    open static let sharedInstance = ORUserInteractionDisabler()
+    fileprivate var enablingTimer: Timer?
 
-    private init() {
+    fileprivate init() {
     }
     
-    public func disableInteractions(onTime duration: NSTimeInterval) {
-        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+    open func disableInteractions(onTime duration: TimeInterval) {
+        UIApplication.shared.beginIgnoringInteractionEvents()
         
-        enablingTimer = NSTimer.scheduledTimerWithTimeInterval(duration, target: self, selector: #selector(enableInteractions), userInfo: nil, repeats: false)
+        enablingTimer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(enableInteractions), userInfo: nil, repeats: false)
     }
     
-    @objc public func enableInteractions() {
+    @objc open func enableInteractions() {
         enablingTimer?.invalidate()
         enablingTimer = nil
-        if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+        if UIApplication.shared.isIgnoringInteractionEvents {
+            UIApplication.shared.endIgnoringInteractionEvents()
         }
     }
 }

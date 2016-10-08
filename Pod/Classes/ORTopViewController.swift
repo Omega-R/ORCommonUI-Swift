@@ -9,13 +9,13 @@
 import UIKit
 
 public func or_topViewController() -> UIViewController? {
-    if let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController {
+    if let rootViewController = UIApplication.shared.keyWindow?.rootViewController {
         return or_topViewControllerWithRootViewController(rootViewController)
     }
     return nil
 }
 
-public func or_topViewControllerWithRootViewController(rootViewController: UIViewController?) -> UIViewController? {
+public func or_topViewControllerWithRootViewController(_ rootViewController: UIViewController?) -> UIViewController? {
     if let tabBarController = rootViewController as? UITabBarController {
         return or_topViewControllerWithRootViewController(tabBarController.selectedViewController)
     } else if let navigationController = rootViewController as? UINavigationController {

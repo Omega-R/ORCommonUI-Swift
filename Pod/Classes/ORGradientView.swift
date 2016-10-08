@@ -9,34 +9,35 @@
 import Foundation
 import UIKit
 
-public class ORGradientView: UIView {
+open class ORGradientView: UIView {
     
-    @IBInspectable public var colorTop: UIColor = UIColor.redColor()
-    @IBInspectable public var colorBottom: UIColor = UIColor.blueColor()
+    @IBInspectable open var colorTop: UIColor = UIColor.red
+    @IBInspectable open var colorBottom: UIColor = UIColor.blue
     
     // MARK: - View lifecycle
     
-    override public func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override open func draw(_ rect: CGRect) {
+        super.draw(rect)
         self.setGradient(colorTop, color2: colorBottom)
     }
     
     // MARK: - Helpers
     
-    public func setGradient(color1: UIColor, color2: UIColor) {
+    open func setGradient(_ color1: UIColor, color2: UIColor) {
         guard let context = UIGraphicsGetCurrentContext() else {
             return
         }
         defer {
-            CGContextRestoreGState(context)
+            context.restoreGState()
         }
         
-        let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [color1.CGColor, color2.CGColor], [0, 1])!
+        let colors = [color1.cgColor, color2.cgColor] as CFArray
+        let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: colors, locations: [0, 1])!
         
         // Draw Path
-        let path = UIBezierPath(rect: CGRectMake(0, 0, frame.width, frame.height))
-        CGContextSaveGState(context)
+        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+        context.saveGState()
         path.addClip()
-        CGContextDrawLinearGradient(context, gradient, CGPointMake(frame.width / 2, 0), CGPointMake(frame.width / 2, frame.height), CGGradientDrawingOptions())
+        context.drawLinearGradient(gradient, start: CGPoint(x: frame.width / 2, y: 0), end: CGPoint(x: frame.width / 2, y: frame.height), options: CGGradientDrawingOptions())
     }
 }
