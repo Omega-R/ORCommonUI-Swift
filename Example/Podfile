@@ -10,6 +10,6 @@ end
 target 'ORCommonUI-Swift_Tests' do
   pod 'ORCommonUI-Swift', :path => '../'
 
-pod 'ORCommonCode-Swift', '~> 3.0.0'
+# pod 'ORCommonCode-Swift', '~> 3.0.0'
 
 end

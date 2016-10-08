@@ -18,10 +18,5 @@
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
-  "frameworks": "UIKit",
-  "dependencies": {
-    "ORCommonCode-Swift": [
-      ">= 3.0.0"
-    ]
-  }
+  "frameworks": "UIKit"
 }
