@@ -10,8 +10,8 @@ import UIKit
 
 open class ORDependentOnScreenScaleSeparator: UIImageView {
 
-    @IBInspectable var affectWidth: Bool = false
-    @IBInspectable var affectHeight: Bool = false
+    @IBInspectable open var affectWidth: Bool = false
+    @IBInspectable open var affectHeight: Bool = false
     
     override open func awakeFromNib() {
         super.awakeFromNib()

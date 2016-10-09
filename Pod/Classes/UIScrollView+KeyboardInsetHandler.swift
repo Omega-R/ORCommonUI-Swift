@@ -10,7 +10,7 @@ import UIKit
 
 open class ORScrollViewKeyboardInsetHandler : UIView {
     
-    weak var scrollView: UIScrollView!
+    fileprivate weak var scrollView: UIScrollView!
     
     init(scrollView: UIScrollView) {
         self.scrollView = scrollView

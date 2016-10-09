@@ -10,9 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    public typealias ActionBlock = (_ action: UIAlertAction) -> Void
-    
-    public func or_showAlert(title: String?, message: String, buttonTitle: String = "OK", actionBlock: ActionBlock? = nil) {
+    public func or_showAlert(title: String?, message: String, buttonTitle: String = "OK", actionBlock: ((UIAlertAction) -> Void)? = nil) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alertVC.addAction(UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.cancel, handler: actionBlock))
         

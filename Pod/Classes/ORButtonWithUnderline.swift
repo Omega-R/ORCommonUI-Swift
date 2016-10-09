@@ -21,7 +21,7 @@ open class ORButtonWithUnderline : UIButton {
         }
     }
     
-    weak var underlineView: UIView!
+    open weak var underlineView: UIView!
     
     override open func awakeFromNib() {
         super.awakeFromNib()

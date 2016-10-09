@@ -11,7 +11,8 @@ import UIKit
 
 open class ORUserInteractionDisabler {
     
-    open static let sharedInstance = ORUserInteractionDisabler()
+    open static let shared = ORUserInteractionDisabler()
+    
     fileprivate var enablingTimer: Timer?
 
     fileprivate init() {
