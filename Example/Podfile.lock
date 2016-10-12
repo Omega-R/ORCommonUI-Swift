@@ -1,5 +1,5 @@
 PODS:
-  - ORCommonUI-Swift (1.0.0)
+  - ORCommonUI-Swift (1.0.1)
 
 DEPENDENCIES:
   - ORCommonUI-Swift (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ORCommonUI-Swift: aaa3f861faeccb74f3f0a270e928b9db51188d1b
+  ORCommonUI-Swift: ffd83d06dd6f8c08de6b3842302913e204add2ba
 
 PODFILE CHECKSUM: 17849cdebaa4a4216b55d7b1a1f3ff42f7e5b901
 
