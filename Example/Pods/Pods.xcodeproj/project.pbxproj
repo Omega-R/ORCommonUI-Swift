@@ -24,6 +24,7 @@
 		84ED6D99B1B28334ADF0B81753AFA3F4 /* ORCustomContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AFCAD23E0570F9B9DBF5153071B3BD /* ORCustomContentButton.swift */; };
 		861A79C166EDD1E89ED8206F6E983700 /* ORCommonUI-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EBAC6C19B4B7AA719AA57B96450DBF /* ORCommonUI-Swift-dummy.m */; };
 		93595FE8D0A0A9C44D61701B5AB04D19 /* UIViewController+ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6015DEA8536F08A300A21DADDE24F /* UIViewController+ChildViewController.swift */; };
+		9432AEC01E4B44D900B569E9 /* ORDashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9432AEBF1E4B44D900B569E9 /* ORDashedView.swift */; };
 		A133DC3EF37433BFD015299C8413A721 /* ORCommonUI-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21218D668B4BE8881B12DC92DC4D7F69 /* ORCommonUI-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA604CD6131E804A1619A56B065B1C11 /* ORInterfaceOrientationRestrictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70F0F2777378D6B7692AD8CEC007BB /* ORInterfaceOrientationRestrictor.swift */; };
 		C0AF1A67C7E8DA0B4440C4882C26070B /* ORUserInteractionDisabler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9247548EB7DD36E2755D9194C5A703E /* ORUserInteractionDisabler.swift */; };
@@ -85,6 +86,7 @@
 		7C427BE96333CDE04A5A972AB626B41A /* ORTopViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ORTopViewController.swift; sourceTree = "<group>"; };
 		8558C3F8E181F82D078065CD98C52869 /* UITableViewCell+BottomSeparator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BottomSeparator.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9432AEBF1E4B44D900B569E9 /* ORDashedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORDashedView.swift; sourceTree = "<group>"; };
 		94E46F3CB8AA627E80BBEA7D92F2B378 /* Pods-ORCommonUI-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ORCommonUI-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9824E9301CA3913C5D8A04728690401C /* ORCommonUI-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ORCommonUI-Swift.modulemap"; sourceTree = "<group>"; };
 		9D864C7B532F3ECFBEAC1BBC03C30224 /* Pods-ORCommonUI-Swift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ORCommonUI-Swift_Example-dummy.m"; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				39F24A25AEE95E42EFFCB8F19707C12B /* UIView+HideKeyboard.swift */,
 				FF5F8BA3FC40C0E483182CCF695CDD54 /* UIViewController+Alert.swift */,
 				6FD6015DEA8536F08A300A21DADDE24F /* UIViewController+ChildViewController.swift */,
+				9432AEBF1E4B44D900B569E9 /* ORDashedView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				53E3346863028DD169979F516A95653A /* UIScrollView+KeyboardInsetHandler.swift in Sources */,
 				11C91CE4F89ED6AAD77C512FB3BFA718 /* UITableViewCell+BottomSeparator.swift in Sources */,
 				6DEB1F63EE129B8E77967BDD1D064FB9 /* UIView+Extended.swift in Sources */,
+				9432AEC01E4B44D900B569E9 /* ORDashedView.swift in Sources */,
 				E25114B90933A0C64E3F51BC9093A37E /* UIView+HideKeyboard.swift in Sources */,
 				FD81CE2FFFC973C244D4A0FABFE1D7A9 /* UIViewController+Alert.swift in Sources */,
 				93595FE8D0A0A9C44D61701B5AB04D19 /* UIViewController+ChildViewController.swift in Sources */,
