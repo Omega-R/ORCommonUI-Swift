@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -89,12 +89,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgR-c3-jaS">
+                                <rect key="frame" x="166" y="130" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.5450980392" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abW-Mg-A7E" customClass="ORCustomContentButton" customModule="ORCommonUI_Swift">
+                                <rect key="frame" x="87" y="90" width="200" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ddq-ZD-XKH"/>
+                                    <constraint firstAttribute="width" constant="200" id="l9f-eN-oeH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="abW-Mg-A7E" firstAttribute="top" secondItem="obp-u8-cgP" secondAttribute="bottom" constant="20" id="6rc-mD-uzT"/>
+                            <constraint firstItem="YgR-c3-jaS" firstAttribute="centerX" secondItem="abW-Mg-A7E" secondAttribute="centerX" id="CoR-3g-ReC"/>
                             <constraint firstItem="obp-u8-cgP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Cp5-kA-Jzr"/>
                             <constraint firstAttribute="trailing" secondItem="obp-u8-cgP" secondAttribute="trailing" id="JGQ-rP-sPQ"/>
                             <constraint firstItem="obp-u8-cgP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Tem-6e-VRM"/>
+                            <constraint firstItem="YgR-c3-jaS" firstAttribute="centerY" secondItem="abW-Mg-A7E" secondAttribute="centerY" id="euF-Ov-9N9"/>
+                            <constraint firstItem="abW-Mg-A7E" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="vWg-rI-E4d"/>
                         </constraints>
                     </view>
                 </viewController>
