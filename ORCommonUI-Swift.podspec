@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ORCommonUI-Swift"
-  s.version          = "3.2.1"
+  s.version          = "3.3.0"
   s.summary          = "ORCommonUI-Swift - UI extensions, custom views, controllers."
 
 # This description is used to generate tags and improve search results.
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = "ORButton, UIViewController+ChildViewController, UIScrollView+KeyboardInsetHandler, ORKeyboardLayoutConstraint, ORDependentOnScreenScaleSeparator, UIView+HideKeyboard, UIViewController+Alert, ORGradientView/ORRadialGradientView, ORRoundRectView/ORRoundRectButton, ORTopViewController (find topmost vc), ORUserInteractionDisabler, UITableViewCell+BottomSeparator, ORDashedView, etc."
+  s.description      = "ORButton, UIViewController+ChildViewController, UIScrollView+KeyboardInsetHandler, ORKeyboardLayoutConstraint, ORDependentOnScreenScaleSeparator, UIView+HideKeyboard, UIViewController+Alert, ORGradientView/ORRadialGradientView, ORRoundRectView/ORRoundRectButton, ORTopViewController (find topmost vc), ORUserInteractionDisabler, UITableViewCell+BottomSeparator, ORDashedView, UIView+Nib, etc."
 
   s.homepage         = "https://bitbucket.org/omegarinc/orcommonui-swift"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -37,4 +37,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'ORCommonCode-Swift', '>= 3.0.0'
+  s.dependency 'PureLayout', '~> 3.0'
 end
