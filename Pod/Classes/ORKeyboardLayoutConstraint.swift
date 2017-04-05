@@ -10,6 +10,7 @@ import UIKit
 
 open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
     
+    fileprivate var kKeyCalculatedConstant: String = ""
     fileprivate var originalOffset: CGFloat = 0
     
     @IBInspectable var useCustomOffsetWhenKeyboardIsShown: Bool = false
@@ -21,6 +22,7 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
         super.awakeFromNib()
         
         originalOffset = constant
+        kKeyCalculatedConstant = "KeyCalculatedConstant"
         NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
@@ -32,27 +34,31 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
     // MARK: - NSNotification methods
     
     func notificationKeyboardWillShow(_ notification: Notification) {
-        if let userInfo = (notification as NSNotification).userInfo {
+        if var userInfo = (notification as NSNotification).userInfo {
             if let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
                 let frame = frameValue.cgRectValue
                 let offset = useCustomOffsetWhenKeyboardIsShown ? customOffset : originalOffset
-                constant = frame.size.height + offset
+                let calculatedConstant = frame.size.height + offset
                 
-                updateLayout(userInfo)
+                if calculatedConstant != constant {
+                    userInfo[kKeyCalculatedConstant] = calculatedConstant
+                    updateLayout(userInfo)
+                }
             }
         }
     }
     
     func notificationKeyboardWillHide(_ notification: Notification) {
-        constant = originalOffset
-        
-        if let userInfo = notification.userInfo {
+        if var userInfo = notification.userInfo {
+            userInfo[kKeyCalculatedConstant] = originalOffset
             updateLayout(userInfo)
         }
     }
     
     func updateLayout(_ userInfo: [AnyHashable: Any]) {
-        if let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber, let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber {
+        if let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber, let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber, let constant = userInfo[kKeyCalculatedConstant] as? CGFloat {
+            self.constant = constant
+            
             UIView.animate(
                 withDuration: TimeInterval(duration.doubleValue),
                 delay: 0,
