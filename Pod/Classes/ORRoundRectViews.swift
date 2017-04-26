@@ -13,6 +13,7 @@ open class ORRoundRectView : UIView {
     override open func layoutSubviews() {
         super.layoutSubviews()
         
+        clipsToBounds = true
         layer.cornerRadius = bounds.height / 2
     }
 }
@@ -22,6 +23,17 @@ open class ORRoundRectButton : UIButton {
     override open func layoutSubviews() {
         super.layoutSubviews()
 
+        clipsToBounds = true
         layer.cornerRadius = bounds.height / 2
+    }
+}
+
+open class ORRoundRectImageView : UIImageView {
+    
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        
+        clipsToBounds = true
+        layer.cornerRadius = min(bounds.width, bounds.height) / 2
     }
 }
