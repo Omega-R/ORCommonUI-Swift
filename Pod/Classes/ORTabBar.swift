@@ -47,16 +47,16 @@ open class ORTabBar: UIView {
     
     fileprivate var stackView = ORTabBarStackView()
     
-    @IBInspectable var tabBarItemWidth: CGFloat = 0
+    @IBInspectable open var tabBarItemWidth: CGFloat = 0
     
     var leadingConstraint = NSLayoutConstraint()
     var trailingConstraint = NSLayoutConstraint()
     var verticalAxisAlignConstraint = NSLayoutConstraint()
     var spaceBetweenElementStackView: Int = 35
     
-    weak var delegate: ORTabBarDelegate?
+    open weak var delegate: ORTabBarDelegate?
     
-    var selectedIndex: Int?
+    open var selectedIndex: Int?
     
     override open func layoutSubviews() {
         super.layoutSubviews()
