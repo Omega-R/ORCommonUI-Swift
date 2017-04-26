@@ -52,7 +52,7 @@ open class ORTabBar: UIView {
     var leadingConstraint = NSLayoutConstraint()
     var trailingConstraint = NSLayoutConstraint()
     var verticalAxisAlignConstraint = NSLayoutConstraint()
-    var spaceBetweenElementStackView: Int = 35
+    open var spaceBetweenElementStackView: Int = 35
     
     open weak var delegate: ORTabBarDelegate?
     
