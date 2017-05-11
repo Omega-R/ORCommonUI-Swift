@@ -7,18 +7,15 @@
 //
 
 import UIKit
+import ORCommonUI_Swift
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var ivColor: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        ivColor.image = UIImage.or_imageWith(color: UIColor.cyan, size: CGSize(width: 1, height: 1))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
-
