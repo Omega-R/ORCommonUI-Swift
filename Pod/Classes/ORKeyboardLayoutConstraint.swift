@@ -63,14 +63,24 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
                 withDuration: TimeInterval(duration.doubleValue),
                 delay: 0,
                 options: UIViewAnimationOptions(rawValue: curve.uintValue),
-                animations: {[weak self] in
-                    var topView = self?.firstItem.superview! as UIView!
-                    while let superview = topView?.superview , !(superview is UIWindow) {
+                animations: {
+                    var topView: UIView
+                    if let s = self.firstItem?.superview {
+                        topView = s!
+                    } else if let s = self.secondItem?.superview {
+                        topView = s!
+                    } else {
+                        print("ORKeyboardLayoutConstraint error: superview wasn't found!")
+                        return
+                    }
+                    
+                    while let superview = topView.superview , !(superview is UIWindow) {
                         topView = superview
                     }
-                    topView?.layoutIfNeeded()
-                },
+                    topView.layoutIfNeeded()
+            },
                 completion: nil)
         }
     }
 }
+
