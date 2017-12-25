@@ -11,11 +11,13 @@ import UIKit
 
 open class ORUserInteractionDisabler {
     
-    open static let shared = ORUserInteractionDisabler()
-    
     fileprivate var enablingTimer: Timer?
     
-    fileprivate init() {
+    public init() {
+    }
+    
+    @discardableResult public init(disablingTime: TimeInterval) {
+        disableInteractions(onTime: disablingTime)
     }
     
     /// use to turn off the Disabler for testing purposes
