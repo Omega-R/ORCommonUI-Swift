@@ -15,7 +15,7 @@ extension UITableView {
         register(nib, forCellReuseIdentifier: String(describing: cellClass))
     }
     
-    open func or_registedHeaderNib(forClass cellClass: AnyClass) {
+    open func or_registerHeaderNib(forClass cellClass: AnyClass) {
         let nib = UINib(nibName: String(describing: cellClass), bundle:nil)
         register(nib, forHeaderFooterViewReuseIdentifier: String(describing: cellClass))
     }
