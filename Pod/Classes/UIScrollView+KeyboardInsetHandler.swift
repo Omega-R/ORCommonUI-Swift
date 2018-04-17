@@ -34,7 +34,7 @@ open class ORScrollViewKeyboardInsetHandler : UIView {
         super.init(coder: aDecoder)
     }
     
-    func notificationKeyboardWillShow(_ notification: Notification) {
+    @objc func notificationKeyboardWillShow(_ notification: Notification) {
         if let userInfo = notification.userInfo {
             if let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
                 let frame = frameValue.cgRectValue
@@ -49,7 +49,7 @@ open class ORScrollViewKeyboardInsetHandler : UIView {
         }
     }
     
-    func notificationKeyboardWillHide(_ notification: Notification) {
+    @objc func notificationKeyboardWillHide(_ notification: Notification) {
         needToCancelKeyboardHiding = false
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.05) {
             guard self.needToCancelKeyboardHiding == false else { return }

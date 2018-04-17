@@ -21,9 +21,9 @@ open class ORCustomContentButton: UIControl {
     
     open override var isHighlighted: Bool {
         didSet {
-            UIView.animate(withDuration: 0.1, animations: { _ in
+            UIView.animate(withDuration: 0.1) {
                 self.alpha = self.isHighlighted ? 0.3 : self.defaultAlpha
-            }) 
+            }
         }
     }
 }

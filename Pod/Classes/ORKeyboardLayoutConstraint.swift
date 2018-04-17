@@ -33,7 +33,7 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
     
     // MARK: - NSNotification methods
     
-    func notificationKeyboardWillShow(_ notification: Notification) {
+    @objc func notificationKeyboardWillShow(_ notification: Notification) {
         if var userInfo = (notification as NSNotification).userInfo {
             if let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
                 let frame = frameValue.cgRectValue
@@ -48,7 +48,7 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
         }
     }
     
-    func notificationKeyboardWillHide(_ notification: Notification) {
+    @objc func notificationKeyboardWillHide(_ notification: Notification) {
         if var userInfo = notification.userInfo {
             userInfo[kKeyCalculatedConstant] = originalOffset
             updateLayout(userInfo)

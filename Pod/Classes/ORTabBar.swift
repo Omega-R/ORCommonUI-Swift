@@ -110,7 +110,7 @@ open class ORTabBar: UIView {
         }
     }
     
-    func touchUpInsideItem(_ sender: UIView) {
+    @objc func touchUpInsideItem(_ sender: UIView) {
         let index = sender.tag
         
         if let delegate = delegate {

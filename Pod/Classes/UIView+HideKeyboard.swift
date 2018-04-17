@@ -17,7 +17,7 @@ extension UIView {
         return tap
     }
     
-    public func or_hideKeyboardHandler() {
+    @objc public func or_hideKeyboardHandler() {
         endEditing(true)
     }
 }
