@@ -1,19 +1,23 @@
 PODS:
-  - ORCommonUI-Swift (3.8.2):
+  - ORCommonUI-Swift (4.0.0):
     - PureLayout (~> 3.0)
   - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - ORCommonUI-Swift (from `../`)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - PureLayout
+
 EXTERNAL SOURCES:
   ORCommonUI-Swift:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  ORCommonUI-Swift: de241feb4ac602b5005f0430efba48625f4d3046
+  ORCommonUI-Swift: 8b3ede8481bd7127921ecc704dfe7b214941973b
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
 PODFILE CHECKSUM: 8f1148d9b0d6c03de52620f1b4d7cb2668832479
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
