@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		28260FE11588BE102CB06300 /* ORCommonUI-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ORCommonUI-Swift.podspec"; path = "../ORCommonUI-Swift.podspec"; sourceTree = "<group>"; };
+		28260FE11588BE102CB06300 /* ORCommonUI-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ORCommonUI-Swift.podspec"; path = "../ORCommonUI-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		316462E8C610EE3B6A8182D4 /* Pods-ORCommonUI-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORCommonUI-Swift_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ORCommonUI-Swift_Example/Pods-ORCommonUI-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		46A4A63384DBF4AA15B85FD2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4C8A35577CC1FD090812D5E6 /* Pods_ORCommonUI_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonUI_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };

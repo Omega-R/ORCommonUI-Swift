@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -77,10 +77,19 @@
                                     <constraint firstAttribute="height" constant="50" id="yeP-SK-myx"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgx-Ya-eVb" customClass="ORHorizontalDashedView" customModule="ORCommonUI_Swift">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgR-c3-jaS">
+                                <rect key="frame" x="166.5" y="110" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.5450980392" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgx-Ya-eVb" customClass="ORHorizontalDashedView" customModule="ORCommonUI_Swift">
                                 <rect key="frame" x="0.0" y="198" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ePa-cn-q3Q"/>
+                                    <constraint firstAttribute="width" constant="240" id="zqq-eV-laj"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="dashColor">
                                         <color key="value" red="0.98039215690000003" green="0.054901960780000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,34 +99,78 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgR-c3-jaS">
-                                <rect key="frame" x="166" y="130" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.33333333329999998" green="0.5450980392" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abW-Mg-A7E" customClass="ORCustomContentButton" customModule="ORCommonUI_Swift">
-                                <rect key="frame" x="87" y="90" width="200" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Ddq-ZD-XKH"/>
-                                    <constraint firstAttribute="width" constant="200" id="l9f-eN-oeH"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a2U-t3-AAd">
                                 <rect key="frame" x="0.0" y="324" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-Ia-rm8">
+                                <rect key="frame" x="0.0" y="70" width="375" height="100"/>
+                                <subviews>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abW-Mg-A7E" customClass="ORCustomContentButton" customModule="ORCommonUI_Swift">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB8-xK-a3i">
+                                                <rect key="frame" x="74.5" y="4" width="225.5" height="41"/>
+                                                <string key="text">buttonHighlightedAlpha = 0.3
+contentHighlightedAlpha = 1</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.28160852190000002" green="0.81595098970000002" blue="0.62760204080000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="IB8-xK-a3i" firstAttribute="centerX" secondItem="abW-Mg-A7E" secondAttribute="centerX" id="8Fo-TK-y51"/>
+                                            <constraint firstItem="IB8-xK-a3i" firstAttribute="centerY" secondItem="abW-Mg-A7E" secondAttribute="centerY" id="b8d-Vf-4ri"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qve-6U-Aln" customClass="ORCustomContentButton" customModule="ORCommonUI_Swift">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWM-YO-Jes">
+                                                <rect key="frame" x="74.5" y="4" width="225.5" height="41"/>
+                                                <string key="text">buttonHighlightedAlpha = 1
+contentHighlightedAlpha = 0.3</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.28160852190000002" green="0.81595098970000002" blue="0.62760204080000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="UWM-YO-Jes" firstAttribute="centerY" secondItem="Qve-6U-Aln" secondAttribute="centerY" id="ONf-6A-drn"/>
+                                            <constraint firstItem="UWM-YO-Jes" firstAttribute="centerX" secondItem="Qve-6U-Aln" secondAttribute="centerX" id="vpx-Uu-Kdv"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="buttonHighlightedAlpha">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="contentHighlightedAlpha">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bfn-t3-j7j"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="abW-Mg-A7E" firstAttribute="top" secondItem="obp-u8-cgP" secondAttribute="bottom" constant="20" id="6rc-mD-uzT"/>
-                            <constraint firstItem="YgR-c3-jaS" firstAttribute="centerX" secondItem="abW-Mg-A7E" secondAttribute="centerX" id="CoR-3g-ReC"/>
+                            <constraint firstItem="a2U-t3-AAd" firstAttribute="height" secondItem="Xgx-Ya-eVb" secondAttribute="height" id="1ru-hE-RGo"/>
                             <constraint firstItem="obp-u8-cgP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Cp5-kA-Jzr"/>
+                            <constraint firstItem="RTP-Ia-rm8" firstAttribute="top" secondItem="obp-u8-cgP" secondAttribute="bottom" constant="8" symbolic="YES" id="IbC-n9-jRW"/>
                             <constraint firstAttribute="trailing" secondItem="obp-u8-cgP" secondAttribute="trailing" id="JGQ-rP-sPQ"/>
+                            <constraint firstItem="RTP-Ia-rm8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="JMg-wo-rKL"/>
+                            <constraint firstItem="YgR-c3-jaS" firstAttribute="centerY" secondItem="RTP-Ia-rm8" secondAttribute="centerY" id="NeD-zE-TUP"/>
+                            <constraint firstAttribute="trailing" secondItem="RTP-Ia-rm8" secondAttribute="trailing" constant="20" symbolic="YES" id="OF8-fn-4tL"/>
                             <constraint firstItem="obp-u8-cgP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Tem-6e-VRM"/>
-                            <constraint firstItem="YgR-c3-jaS" firstAttribute="centerY" secondItem="abW-Mg-A7E" secondAttribute="centerY" id="euF-Ov-9N9"/>
-                            <constraint firstItem="abW-Mg-A7E" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="vWg-rI-E4d"/>
+                            <constraint firstItem="a2U-t3-AAd" firstAttribute="top" secondItem="Xgx-Ya-eVb" secondAttribute="bottom" id="WG4-kb-lRz"/>
+                            <constraint firstItem="Xgx-Ya-eVb" firstAttribute="top" secondItem="RTP-Ia-rm8" secondAttribute="bottom" constant="8" symbolic="YES" id="ZTV-kE-BFy"/>
+                            <constraint firstItem="YgR-c3-jaS" firstAttribute="centerX" secondItem="RTP-Ia-rm8" secondAttribute="centerX" id="d7E-wO-ckC"/>
+                            <constraint firstItem="a2U-t3-AAd" firstAttribute="leading" secondItem="Xgx-Ya-eVb" secondAttribute="leading" id="exF-5c-kQ0"/>
+                            <constraint firstItem="a2U-t3-AAd" firstAttribute="width" secondItem="Xgx-Ya-eVb" secondAttribute="width" id="iLm-iy-0nc"/>
+                            <constraint firstItem="Xgx-Ya-eVb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xhH-q0-dbr"/>
                         </constraints>
                     </view>
                     <connections>

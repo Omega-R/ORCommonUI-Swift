@@ -1,6 +1,6 @@
 {
   "name": "ORCommonUI-Swift",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "summary": "ORCommonUI-Swift - UI extensions, custom views, controllers.",
   "description": "ORButton, UIViewController+ChildViewController, UIScrollView+KeyboardInsetHandler, ORKeyboardLayoutConstraint, ORDependentOnScreenScaleSeparator, UIView+HideKeyboard, UIViewController+Alert, ORGradientView/ORRadialGradientView, ORRoundRectView/ORRoundRectButton, ORTopViewController (find topmost vc), ORUserInteractionDisabler, UITableViewCell+BottomSeparator, UITableView+RegisterCell, UICollectionView+RegisterCell, ORDashedView, ORTabBar, UIView+Nib, UIView+Snapshot, UIColor+Extended, UIImage+Color, round views, etc.",
   "homepage": "https://bitbucket.org/omegarinc/orcommonui-swift",
@@ -11,7 +11,7 @@
   },
   "source": {
     "git": "https://bitbucket.org/omegarinc/orcommonui-swift.git",
-    "tag": "4.0.0"
+    "tag": "4.1.0"
   },
   "platforms": {
     "ios": "8.0"

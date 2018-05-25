@@ -8,21 +8,27 @@
 
 import UIKit
 
+@IBDesignable
 open class ORCustomContentButton: UIControl {
-
-    var defaultAlpha: CGFloat = 1.0
+    
+    fileprivate var defaultAlphaForButton: CGFloat = 1.0
+    
+    @IBInspectable open var buttonHighlightedAlpha: CGFloat = 0.3
+    @IBInspectable open var contentHighlightedAlpha: CGFloat = 1
     
     open override func awakeFromNib() {
         super.awakeFromNib()
         
         isExclusiveTouch = true
-        defaultAlpha = alpha
+        defaultAlphaForButton = alpha
+        subviews.forEach({ $0.isUserInteractionEnabled = false })
     }
     
     open override var isHighlighted: Bool {
         didSet {
             UIView.animate(withDuration: 0.1) {
-                self.alpha = self.isHighlighted ? 0.3 : self.defaultAlpha
+                self.alpha = self.isHighlighted ? self.buttonHighlightedAlpha : self.defaultAlphaForButton
+                self.subviews.forEach({ $0.alpha = self.isHighlighted ? self.contentHighlightedAlpha : 1 })
             }
         }
     }
