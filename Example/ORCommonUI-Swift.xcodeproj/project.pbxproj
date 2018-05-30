@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		94EDFCD920BEC7F600C6CA4C /* TestTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFCD720BEC7F600C6CA4C /* TestTVCell.swift */; };
+		94EDFCDA20BEC7F600C6CA4C /* TestTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EDFCD820BEC7F600C6CA4C /* TestTVCell.xib */; };
 		DE93FA100012540201CAEE0A /* Pods_ORCommonUI_Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8A35577CC1FD090812D5E6 /* Pods_ORCommonUI_Swift_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		607FACE51AFB9204008FA782 /* ORCommonUI-Swift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ORCommonUI-Swift_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		94EDFCD720BEC7F600C6CA4C /* TestTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTVCell.swift; sourceTree = "<group>"; };
+		94EDFCD820BEC7F600C6CA4C /* TestTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTVCell.xib; sourceTree = "<group>"; };
 		956181C6F57CA5751173782E /* Pods_ORCommonUI_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORCommonUI_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A856B5D284A6ED210DD5592A /* Pods-ORCommonUI-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORCommonUI-Swift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ORCommonUI-Swift_Example/Pods-ORCommonUI-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B40EB3CDD019AAB8440D2EC1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				94EDFCD720BEC7F600C6CA4C /* TestTVCell.swift */,
+				94EDFCD820BEC7F600C6CA4C /* TestTVCell.xib */,
 			);
 			name = "Example for ORCommonUI-Swift";
 			path = "ORCommonUI-Swift";
@@ -249,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				94EDFCDA20BEC7F600C6CA4C /* TestTVCell.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -348,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				94EDFCD920BEC7F600C6CA4C /* TestTVCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

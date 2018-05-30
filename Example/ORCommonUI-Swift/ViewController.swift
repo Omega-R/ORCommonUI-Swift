@@ -9,9 +9,10 @@
 import UIKit
 import ORCommonUI_Swift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var ivColor: UIImageView!
+    @IBOutlet weak var tableVew: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,5 +25,17 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             disabler.enableInteractions()
         }
+        
+        tableVew.dataSource = self
+        tableVew.or_registerCellNibs(forClasses: TestTVCell.self, TestTVCell.self)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableVew.dequeueReusableCell(withIdentifier: String(describing: TestTVCell.self), for: indexPath) as! TestTVCell
+        return cell
     }
 }

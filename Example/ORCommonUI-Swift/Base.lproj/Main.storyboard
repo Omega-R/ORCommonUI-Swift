@@ -78,13 +78,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgR-c3-jaS">
-                                <rect key="frame" x="166.5" y="110" width="42" height="20.5"/>
+                                <rect key="frame" x="148.5" y="133.5" width="78" height="39.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.5450980392" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgx-Ya-eVb" customClass="ORHorizontalDashedView" customModule="ORCommonUI_Swift">
-                                <rect key="frame" x="0.0" y="198" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgx-Ya-eVb" customClass="ORHorizontalDashedView" customModule="ORCommonUI_Swift">
+                                <rect key="frame" x="0.0" y="236" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="ePa-cn-q3Q"/>
@@ -99,17 +99,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a2U-t3-AAd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a2U-t3-AAd">
                                 <rect key="frame" x="0.0" y="324" width="240" height="128"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-Ia-rm8">
-                                <rect key="frame" x="0.0" y="70" width="375" height="100"/>
+                                <rect key="frame" x="20" y="78" width="335" height="150"/>
                                 <subviews>
                                     <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abW-Mg-A7E" customClass="ORCustomContentButton" customModule="ORCommonUI_Swift">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="73"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB8-xK-a3i">
-                                                <rect key="frame" x="74.5" y="4" width="225.5" height="41"/>
+                                                <rect key="frame" x="54.5" y="15.5" width="225.5" height="41"/>
                                                 <string key="text">buttonHighlightedAlpha = 0.3
 contentHighlightedAlpha = 1</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -124,10 +124,10 @@ contentHighlightedAlpha = 1</string>
                                         </constraints>
                                     </view>
                                     <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qve-6U-Aln" customClass="ORCustomContentButton" customModule="ORCommonUI_Swift">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="77" width="335" height="73"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWM-YO-Jes">
-                                                <rect key="frame" x="74.5" y="4" width="225.5" height="41"/>
+                                                <rect key="frame" x="50.5" y="15.5" width="234" height="41"/>
                                                 <string key="text">buttonHighlightedAlpha = 1
 contentHighlightedAlpha = 0.3</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -154,10 +154,19 @@ contentHighlightedAlpha = 0.3</string>
                                     <constraint firstAttribute="height" constant="150" id="bfn-t3-j7j"/>
                                 </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6kM-JS-qZF">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IIY-eO-kj5"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a2U-t3-AAd" firstAttribute="height" secondItem="Xgx-Ya-eVb" secondAttribute="height" id="1ru-hE-RGo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6kM-JS-qZF" secondAttribute="bottom" id="5Mt-KW-lOS"/>
+                            <constraint firstAttribute="trailing" secondItem="6kM-JS-qZF" secondAttribute="trailing" id="7UF-Az-AN0"/>
                             <constraint firstItem="obp-u8-cgP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Cp5-kA-Jzr"/>
                             <constraint firstItem="RTP-Ia-rm8" firstAttribute="top" secondItem="obp-u8-cgP" secondAttribute="bottom" constant="8" symbolic="YES" id="IbC-n9-jRW"/>
                             <constraint firstAttribute="trailing" secondItem="obp-u8-cgP" secondAttribute="trailing" id="JGQ-rP-sPQ"/>
@@ -170,11 +179,13 @@ contentHighlightedAlpha = 0.3</string>
                             <constraint firstItem="YgR-c3-jaS" firstAttribute="centerX" secondItem="RTP-Ia-rm8" secondAttribute="centerX" id="d7E-wO-ckC"/>
                             <constraint firstItem="a2U-t3-AAd" firstAttribute="leading" secondItem="Xgx-Ya-eVb" secondAttribute="leading" id="exF-5c-kQ0"/>
                             <constraint firstItem="a2U-t3-AAd" firstAttribute="width" secondItem="Xgx-Ya-eVb" secondAttribute="width" id="iLm-iy-0nc"/>
+                            <constraint firstItem="6kM-JS-qZF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="m5f-4W-HzT"/>
                             <constraint firstItem="Xgx-Ya-eVb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xhH-q0-dbr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ivColor" destination="a2U-t3-AAd" id="Ere-jM-9nF"/>
+                        <outlet property="tableVew" destination="6kM-JS-qZF" id="eAU-hi-ewM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
