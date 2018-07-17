@@ -65,9 +65,9 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
                 options: UIViewAnimationOptions(rawValue: curve.uintValue),
                 animations: {
                     var topView: UIView
-                    if let s = self.firstItem?.superview {
+                    if let s = self.firstItem?.superview, s != nil {
                         topView = s!
-                    } else if let s = self.secondItem?.superview {
+                    } else if let s = self.secondItem?.superview, s != nil {
                         topView = s!
                     } else {
                         print("ORKeyboardLayoutConstraint error: superview wasn't found!")

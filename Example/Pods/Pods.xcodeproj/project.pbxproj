@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		060297BF65FE2557919BE97BB558D1A2 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A99759FFC3FBD1151671002B45E497 /* String+Hex.swift */; };
 		095F2B1A4E062A0AEECFB4FFEF92D20A /* ORDashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957C22F1DDD668CBD96F2EF40F19016 /* ORDashedView.swift */; };
-		12F388BFA23A7D79E36CC4A9336B217C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ABC92C4981517604AA898FCB88C9E7 /* Foundation.framework */; };
+		0B5DA1499F3EC6777EB42F8245341D11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE043E5733821629DED422284C8FCA09 /* Foundation.framework */; };
 		16E34094EACC9B72A9FE96C85C3AF28D /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D3F05D324772E907DB1D4DA2C89AA2 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2115827E4D27C6C8D5055B74AED58A7C /* ORCommonUI-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9347A9D9CC45C44F6AFA6E486D193CB4 /* ORCommonUI-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		290EE3C6FD89B51A7ED11DA057479696 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B79321D082006FA244F4FB8C89979 /* UIView+Shadow.swift */; };
@@ -20,12 +20,8 @@
 		3B79D47367345BA4DC4EA7F41718F298 /* ORCommonUI-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B64C12193E34E7080CDABE9115B043 /* ORCommonUI-Swift-dummy.m */; };
 		433BFB3A4BDA8D6A66428A77C1D38DE6 /* ORRadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1729A612BA2DA3AA080127E40522E /* ORRadialGradientView.swift */; };
 		46CE4B93ABAA5B7811055668261EA932 /* Pods-ORCommonUI-Swift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BA7BE7AAF36D03B284EB8F100C6B3A /* Pods-ORCommonUI-Swift_Example-dummy.m */; };
-		4D77ECF1D2C27D0A72D73EE27239170C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ABC92C4981517604AA898FCB88C9E7 /* Foundation.framework */; };
 		55179C2BDEFEBABD452E7F3E09E9D535 /* ORCustomContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC17C19085A1312AC3F5ACCEC65DD99 /* ORCustomContentButton.swift */; };
-		5CF2CE9DCAD72FF0566A07ED2E42D20F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ABC92C4981517604AA898FCB88C9E7 /* Foundation.framework */; };
 		5DE6DEF337EF03E1F2E249A6D058C46B /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F9C541DDAE3A274F6F27ED6C6DB7D65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5CF235C4CF1C73DE41993C30A232ED /* UIKit.framework */; };
-		60BB1D4436889F21EFD0541F6714CB04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ABC92C4981517604AA898FCB88C9E7 /* Foundation.framework */; };
 		619FE01AA240DD776D930D4BDD9A8F17 /* ORRoundRectViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E31CCF8DF8C9E33C2661B84F82483 /* ORRoundRectViews.swift */; };
 		630300DA12D5731E0560BEA0B51E5DD1 /* ORTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93774F02FA5C7D1A94A62BCBA870D853 /* ORTopViewController.swift */; };
 		65A7E0B02DC22D92BB2A506D490697A2 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA99A0C2544E8B354289F975044FEC4 /* UIView+Snapshot.swift */; };
@@ -37,14 +33,17 @@
 		85E85DDDC2BB350B1A3CAAF21EB3AFF9 /* ORGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25547B6A7CC3DF3490A9B7FE960329 /* ORGradientView.swift */; };
 		8C44804E9B02A4E1509539B73C419F16 /* Pods-ORCommonUI-Swift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F827D049027B0854E133136EB61038B /* Pods-ORCommonUI-Swift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DE1B35DD4B0DF297F2B0C791120AC29 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D752D9C8B1735FC2560A8497405CC38 /* UIView+Nib.swift */; };
+		8EBACF4A39C67C00DA5E8717719FA16C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE043E5733821629DED422284C8FCA09 /* Foundation.framework */; };
 		8FFD37E4351B35BFA23EA51EA0CDB542 /* UITableViewCell+BottomSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B60E383EC09139F03F44A0C6145F43 /* UITableViewCell+BottomSeparator.swift */; };
 		9114A39315C83E053443D6177F2D6732 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */; };
 		96B0CCA623C0B561DB966220566ECDE8 /* ORDependentOnScreenScaleSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58F491999A183EF6597AC9962264174 /* ORDependentOnScreenScaleSeparator.swift */; };
 		9CC1570A3D3278944ABFE93373095AAA /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51DE0AAF650D7F53FB12DC6A5DAC3F5D /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FEEC97D638670CEFA53E5C1E1A20E2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950267F1032ED866BE0C590C0E37A7E0 /* UIKit.framework */; };
 		A57FAB032E82F459C74FDD2CE65D8EDD /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */; };
 		A6366C48C6DE0AD3D35A5E8F27C7473D /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */; };
 		AA6F821746A4EF901B14CE4AF3209C57 /* UITableView+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4942599238287C95FABA84E2B4D26A /* UITableView+RegisterCell.swift */; };
 		B652D375FD21A35C3A1D490D60BCA9DA /* ORButtonWithUnderline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29A32784F57C1364163CE73B91668D4 /* ORButtonWithUnderline.swift */; };
+		B7141E962835762FFCF9D3963F31110B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE043E5733821629DED422284C8FCA09 /* Foundation.framework */; };
 		BCF856764E3690C038BBE6869DAC827A /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AA654F86E857710B01965E96AC15F25C /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE9135524E652D0E65935B0AB0224255 /* UIScrollView+KeyboardInsetHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D51A61F32D0FD6AD682855B0A5E2BD /* UIScrollView+KeyboardInsetHandler.swift */; };
 		C75E8C979637DF95A220591728E9A926 /* ORTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A8C69D010ABE560040D42DB9196EF /* ORTabBar.swift */; };
@@ -54,6 +53,7 @@
 		D71D9414F2AB78C1E06D5AED2E1DC167 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6990C47F02B6691DD4DA9D4504A36B /* ALView+PureLayout.m */; };
 		DA583AD9144C5F2A426D1AACABBE738F /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 256CB866D56B919DA6C9ABF2C32B4D37 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2BFBC66FC0723FD912B3C1C24E51DC7 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7D472071E15F7DC98E66B5980E1549 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E40AD1730E07B7A4289E57CD4EAFE932 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE043E5733821629DED422284C8FCA09 /* Foundation.framework */; };
 		E40BE852D0298F3BC7471DB7F95D40BF /* UIViewController+ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086CCE0A268C040009C0D45C145BFF4 /* UIViewController+ChildViewController.swift */; };
 		EFEB1B53359171BDEFDDA8FAE04C0D73 /* ORKeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA7A29A49FAA1518F2A0EFE2023742 /* ORKeyboardLayoutConstraint.swift */; };
 		FFEF789020B8FF4BAD7CCB60157410F9 /* Pods-ORCommonUI-Swift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49375EE749D85ECB07DC28B3E13675F1 /* Pods-ORCommonUI-Swift_Tests-dummy.m */; };
@@ -144,11 +144,11 @@
 		93774F02FA5C7D1A94A62BCBA870D853 /* ORTopViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORTopViewController.swift; path = Pod/Classes/ORTopViewController.swift; sourceTree = "<group>"; };
 		938BAC482680D24B29FE0B3B193751D4 /* ORUserInteractionDisabler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORUserInteractionDisabler.swift; path = Pod/Classes/ORUserInteractionDisabler.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		950267F1032ED866BE0C590C0E37A7E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		97298AB7C9253E24B6FBFC57103C3577 /* ORCommonUI-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ORCommonUI-Swift-prefix.pch"; sourceTree = "<group>"; };
 		97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9991B56C42884EDCF12A37BCB19BEE19 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PureLayout.framework; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB61AC5578E89ECDD5F7FD9E325D8AD /* UIView+HideKeyboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+HideKeyboard.swift"; path = "Pod/Classes/UIView+HideKeyboard.swift"; sourceTree = "<group>"; };
-		9E5CF235C4CF1C73DE41993C30A232ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A0B64C12193E34E7080CDABE9115B043 /* ORCommonUI-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ORCommonUI-Swift-dummy.m"; sourceTree = "<group>"; };
 		A29A32784F57C1364163CE73B91668D4 /* ORButtonWithUnderline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORButtonWithUnderline.swift; path = Pod/Classes/ORButtonWithUnderline.swift; sourceTree = "<group>"; };
 		A693F7DE0B233631328B950C2FD44D3F /* Pods-ORCommonUI-Swift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ORCommonUI-Swift_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -165,13 +165,13 @@
 		CDA99A0C2544E8B354289F975044FEC4 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Snapshot.swift"; path = "Pod/Classes/UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		D086CCE0A268C040009C0D45C145BFF4 /* UIViewController+ChildViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+ChildViewController.swift"; path = "Pod/Classes/UIViewController+ChildViewController.swift"; sourceTree = "<group>"; };
 		D31876025FB3AACFE7796AA0443FD0E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		D4ABC92C4981517604AA898FCB88C9E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D5BA7BE7AAF36D03B284EB8F100C6B3A /* Pods-ORCommonUI-Swift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ORCommonUI-Swift_Example-dummy.m"; sourceTree = "<group>"; };
 		D65E26FBA008F170E551BB70FA686898 /* ORCommonUI-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = "ORCommonUI-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
 		DA4AF41644D7542E888E164AC47AD4A9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Alert.swift"; path = "Pod/Classes/UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		DAC92CD71EE2206320A3786726025936 /* Pods-ORCommonUI-Swift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ORCommonUI-Swift_Example.modulemap"; sourceTree = "<group>"; };
 		DBCD62A8A7F665C72FD808865673DC24 /* Pods-ORCommonUI-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ORCommonUI-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE043E5733821629DED422284C8FCA09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E053EFCC1DF440A338E31DF78D7A7B6F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE7069671C4FC7CD178436F40B2A9B79 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
 		F38218DD690776C41B10D7D765B07805 /* ORInterfaceOrientationRestrictor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ORInterfaceOrientationRestrictor.swift; path = Pod/Classes/ORInterfaceOrientationRestrictor.swift; sourceTree = "<group>"; };
@@ -184,9 +184,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF2CE9DCAD72FF0566A07ED2E42D20F /* Foundation.framework in Frameworks */,
+				8EBACF4A39C67C00DA5E8717719FA16C /* Foundation.framework in Frameworks */,
 				A57FAB032E82F459C74FDD2CE65D8EDD /* PureLayout.framework in Frameworks */,
-				5F9C541DDAE3A274F6F27ED6C6DB7D65 /* UIKit.framework in Frameworks */,
+				9FEEC97D638670CEFA53E5C1E1A20E2C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60BB1D4436889F21EFD0541F6714CB04 /* Foundation.framework in Frameworks */,
+				B7141E962835762FFCF9D3963F31110B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12F388BFA23A7D79E36CC4A9336B217C /* Foundation.framework in Frameworks */,
+				E40AD1730E07B7A4289E57CD4EAFE932 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,18 +210,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D77ECF1D2C27D0A72D73EE27239170C /* Foundation.framework in Frameworks */,
+				0B5DA1499F3EC6777EB42F8245341D11 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A15693EE08133585BC3FDDFA49A06AD /* iOS */ = {
+		31F1282B55D7353213E4C9889307BC16 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D4ABC92C4981517604AA898FCB88C9E7 /* Foundation.framework */,
-				9E5CF235C4CF1C73DE41993C30A232ED /* UIKit.framework */,
+				DE043E5733821629DED422284C8FCA09 /* Foundation.framework */,
+				950267F1032ED866BE0C590C0E37A7E0 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */,
-				1A15693EE08133585BC3FDDFA49A06AD /* iOS */,
+				31F1282B55D7353213E4C9889307BC16 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
