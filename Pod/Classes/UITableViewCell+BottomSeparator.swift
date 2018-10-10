@@ -16,13 +16,13 @@ extension UITableViewCell {
         splitView.backgroundColor = color
         self.contentView.addSubview(splitView)
         
-        let leftConstraint = NSLayoutConstraint(item: splitView, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1.0, constant: insets.left)
+        let leftConstraint = NSLayoutConstraint(item: splitView, attribute: NSLayoutConstraint.Attribute.left, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.left, multiplier: 1.0, constant: insets.left)
         
-        let rightConstraint = NSLayoutConstraint(item: splitView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.right, multiplier: 1.0, constant: -insets.right)
+        let rightConstraint = NSLayoutConstraint(item: splitView, attribute: NSLayoutConstraint.Attribute.right, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.right, multiplier: 1.0, constant: -insets.right)
         
-        let bottomConstraint = NSLayoutConstraint(item: splitView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: 0)
+        let bottomConstraint = NSLayoutConstraint(item: splitView, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1.0, constant: 0)
         
-        let heightConstraint = NSLayoutConstraint(item: splitView, attribute: .height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 1 / UIScreen.main.scale)
+        let heightConstraint = NSLayoutConstraint(item: splitView, attribute: .height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 1 / UIScreen.main.scale)
         
         addConstraints([leftConstraint, rightConstraint, bottomConstraint, heightConstraint])
         

@@ -28,7 +28,7 @@ open class ORButtonWithUnderline : UIButton {
         
         clipsToBounds = false
         let uv = UIView(frame: CGRect(x: 0, y: bounds.height + underlineOffset, width: bounds.width, height: underlineThickness))
-        uv.backgroundColor = titleColor(for: UIControlState())
+        uv.backgroundColor = titleColor(for: UIControl.State())
         underlineView = uv
         addSubview(underlineView)
         underlineView.isHidden = underlineHidden

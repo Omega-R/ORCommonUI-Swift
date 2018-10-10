@@ -23,8 +23,8 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
         
         originalOffset = constant
         kKeyCalculatedConstant = "KeyCalculatedConstant"
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     deinit {
@@ -35,7 +35,7 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
     
     @objc func notificationKeyboardWillShow(_ notification: Notification) {
         if var userInfo = (notification as NSNotification).userInfo {
-            if let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            if let frameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 let frame = frameValue.cgRectValue
                 let offset = useCustomOffsetWhenKeyboardIsShown ? customOffset : originalOffset
                 let calculatedConstant = frame.size.height + offset
@@ -56,13 +56,13 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
     }
     
     func updateLayout(_ userInfo: [AnyHashable: Any]) {
-        if let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber, let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber, let constant = userInfo[kKeyCalculatedConstant] as? CGFloat {
+        if let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber, let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber, let constant = userInfo[kKeyCalculatedConstant] as? CGFloat {
             self.constant = constant
             
             UIView.animate(
                 withDuration: TimeInterval(duration.doubleValue),
                 delay: 0,
-                options: UIViewAnimationOptions(rawValue: curve.uintValue),
+                options: UIView.AnimationOptions(rawValue: curve.uintValue),
                 animations: {
                     var topView: UIView
                     if let s = self.firstItem?.superview, s != nil {

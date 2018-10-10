@@ -18,11 +18,11 @@ open class ORDependentOnScreenScaleSeparator: UIImageView {
         
         for constraint in constraints {
             // Set height of exactly one pixel if this view is using constraints
-            if affectWidth && constraint.firstAttribute == NSLayoutAttribute.width {
+            if affectWidth && constraint.firstAttribute == NSLayoutConstraint.Attribute.width {
                 constraint.constant /= UIScreen.main.scale
             }
             
-            if affectHeight && constraint.firstAttribute == NSLayoutAttribute.height {
+            if affectHeight && constraint.firstAttribute == NSLayoutConstraint.Attribute.height {
                 constraint.constant /= UIScreen.main.scale
             }
         }

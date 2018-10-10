@@ -22,8 +22,8 @@ open class ORScrollViewKeyboardInsetHandler : UIView {
         
         isHidden = true
         
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationKeyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     deinit {
@@ -36,12 +36,12 @@ open class ORScrollViewKeyboardInsetHandler : UIView {
     
     @objc func notificationKeyboardWillShow(_ notification: Notification) {
         if let userInfo = notification.userInfo {
-            if let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            if let frameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 let frame = frameValue.cgRectValue
                 let kbSize = frame.size
                 
                 let currentInsets = scrollView.contentInset
-                let contentInsets = UIEdgeInsetsMake(currentInsets.top, currentInsets.left, kbSize.height, currentInsets.right)
+                let contentInsets = UIEdgeInsets.init(top: currentInsets.top, left: currentInsets.left, bottom: kbSize.height, right: currentInsets.right)
                 scrollView.contentInset = contentInsets
                 scrollView.scrollIndicatorInsets = contentInsets
                 needToCancelKeyboardHiding = true
@@ -55,7 +55,7 @@ open class ORScrollViewKeyboardInsetHandler : UIView {
             guard self.needToCancelKeyboardHiding == false else { return }
             
             let animationDuration: Double = {
-                if let userInfo = notification.userInfo, let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber {
+                if let userInfo = notification.userInfo, let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber {
                     return duration.doubleValue
                 } else {
                     return 0.25
@@ -65,7 +65,7 @@ open class ORScrollViewKeyboardInsetHandler : UIView {
             UIView.animate(withDuration: animationDuration - 0.05, animations: { [weak self] in
                 if let scrollView = self?.scrollView {
                     let currentInsets = scrollView.contentInset
-                    let contentInsets = UIEdgeInsetsMake(currentInsets.top, currentInsets.left, 0, currentInsets.right)
+                    let contentInsets = UIEdgeInsets.init(top: currentInsets.top, left: currentInsets.left, bottom: 0, right: currentInsets.right)
                     scrollView.contentInset = contentInsets
                     scrollView.scrollIndicatorInsets = contentInsets
                 }

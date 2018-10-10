@@ -46,7 +46,7 @@ open class ORDashedView: UIView {
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = cgColor
         shapeLayer.lineWidth = orientation == .horizontal ? frame.height : frame.width
-        shapeLayer.lineJoin = kCALineJoinRound
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
         let size = NSNumber(value: dashSize)
         shapeLayer.lineDashPattern = [size, size]
         
