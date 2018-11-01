@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImage {
     
-    open static func or_imageWith(color: UIColor, size: CGSize) -> UIImage {
+    public static func or_imageWith(color: UIColor, size: CGSize) -> UIImage {
         let rect = CGRect(origin: CGPoint(x: 0, y:0), size: size)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()!
