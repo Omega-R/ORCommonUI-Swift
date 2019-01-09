@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ORCommonUI-Swift"
-  s.version          = "4.2.3"
+  s.version          = "4.2.4"
   s.summary          = "ORCommonUI-Swift - UI extensions, custom views, controllers."
 
 # This description is used to generate tags and improve search results.

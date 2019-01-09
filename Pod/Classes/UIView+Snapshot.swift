@@ -10,13 +10,18 @@ import UIKit
 
 extension UIView {
     
-    open func or_takeSnapshot() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
-
-        layer.render(in: UIGraphicsGetCurrentContext()!)
-        
-        let image = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return image
+    var or_snapshot: UIImage {
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(bounds: bounds)
+            return renderer.image { rendererContext in
+                layer.render(in: rendererContext.cgContext)
+            }
+        } else {
+            UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
+            layer.render(in: UIGraphicsGetCurrentContext()!)
+            let image = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            return image
+        }
     }
 }
