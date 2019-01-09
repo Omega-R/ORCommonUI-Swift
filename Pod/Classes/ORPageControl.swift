@@ -37,7 +37,7 @@ open class ORPageControl: UIView {
     
     // MARK: - Lifecycle
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         setup()
