@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    var or_snapshot: UIImage {
+    public var or_snapshot: UIImage {
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(bounds: bounds)
             return renderer.image { rendererContext in
