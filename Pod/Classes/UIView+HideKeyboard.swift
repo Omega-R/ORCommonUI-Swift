@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    public func or_hideKeyboardWhenTapped() -> UITapGestureRecognizer {
+    @discardableResult public func or_hideKeyboardWhenTapped() -> UITapGestureRecognizer {
         let tap = UITapGestureRecognizer(target: self, action: #selector(or_hideKeyboardHandler))
         tap.cancelsTouchesInView = false
         addGestureRecognizer(tap)
