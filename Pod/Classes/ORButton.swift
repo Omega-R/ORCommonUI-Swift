@@ -34,9 +34,9 @@ open class ORButton : UIButton {
         }
     }
     
-    @IBInspectable open var borderColor: UIColor? = nil {
+    @IBInspectable open var borderColor: UIColor = .clear {
         didSet {
-            layer.borderColor = borderColor?.cgColor
+            layer.borderColor = borderColor.cgColor
         }
     }
 
