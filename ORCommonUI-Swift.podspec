@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ORCommonUI-Swift"
-  s.version          = "5.0.0"
+  s.version          = "5.0.1"
   s.summary          = "ORCommonUI-Swift - UI extensions, custom views, controllers."
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://bitbucket.org/omegarinc/orcommonui-swift"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Maxim Soloviev" => "maxim@omega-r.com", "Alexander Kurbanov" => "kurbanov.alex@omega-r.com" }
+  s.author           = { "Nikita Egoshin" => "nikita.egoshin@omega-r.com", "Sergey Aleksandrov" => "sergey.aleksandrov@omega-r.com", "Alexey Vedushev" => "alexey.vedushev@omega-r.com",  "Dmitriy Mamatov" => "dmitriy.mamatov@omega-r.com"}
   s.source           = { :git => "https://bitbucket.org/omegarinc/orcommonui-swift.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

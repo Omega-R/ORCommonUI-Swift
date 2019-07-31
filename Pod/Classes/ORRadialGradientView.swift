@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable open class ORRadialGradientView: UIView {
+open class ORRadialGradientView: UIView {
 
     @IBInspectable open var innerColor: UIColor = UIColor.red.withAlphaComponent(0)
     @IBInspectable open var innerColorLocation: CGFloat = 0

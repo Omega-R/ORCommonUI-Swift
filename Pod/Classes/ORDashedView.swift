@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 open class ORDashedView: UIView {
 
     enum OrientaionDashedLine{

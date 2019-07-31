@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 open class ORCustomContentButton: UIControl {
     
     fileprivate var defaultAlphaForButton: CGFloat = 1.0
