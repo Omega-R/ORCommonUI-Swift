@@ -11,7 +11,7 @@ import UIKit
 open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
     
     fileprivate var kKeyCalculatedConstant: String = ""
-    fileprivate var originalOffset: CGFloat = 0
+    var originalOffset: CGFloat = 0
     
     @IBInspectable var useCustomOffsetWhenKeyboardIsShown: Bool = false
     @IBInspectable var customOffset: CGFloat = 0
