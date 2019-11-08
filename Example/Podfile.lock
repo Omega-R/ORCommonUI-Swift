@@ -1,5 +1,5 @@
 PODS:
-  - ORCommonUI-Swift (5.0.3):
+  - ORCommonUI-Swift (5.0.4):
     - PureLayout (~> 3.0)
   - PureLayout (3.0.2)
 
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ORCommonUI-Swift: ed7f08885bd168f1bb539e5913b58fd2ffc0390f
+  ORCommonUI-Swift: 6cc029c3bd02b700e6c375cb028087b858a92518
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
 PODFILE CHECKSUM: c1a7e4ec90bec821daefdc23706a32cb5e39369e
 
-COCOAPODS: 1.8.0.beta.2
+COCOAPODS: 1.8.4
