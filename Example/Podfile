@@ -1,7 +1,7 @@
 source 'https://bitbucket.org/omegarinc/cocoapods-specs.git' # private spec repo
 source 'https://github.com/CocoaPods/Specs.git' # master cocoapods spec repo
 
-platform :ios, '9.0'
+platform :ios, '12.0'
 use_frameworks!
 
 target 'ORCommonUI-Swift_Example' do
