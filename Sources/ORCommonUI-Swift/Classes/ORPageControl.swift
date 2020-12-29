@@ -4,6 +4,8 @@
 //
 //  Created by Sergey Aleksandrov on 09/01/2019.
 //
+import UIKit
+import QuartzCore
 
 open class ORPageControl: UIView {
     

@@ -5,7 +5,8 @@
 //  Created by Alexey Vedushev on 16/01/2019.
 //
 
-import Foundation
+import UIKit
+import QuartzCore
 
 public class LayerBuilder {
     public static func getMaskLayer(rect: CGRect, cornerRadius: CGFloat) -> CAShapeLayer {
