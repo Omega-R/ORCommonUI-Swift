@@ -1,13 +1,20 @@
 PODS:
-  - ORCommonUI-Swift (5.0.4):
-    - PureLayout (~> 3.0)
-  - PureLayout (3.0.2)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - ORCommonUI-Swift (6.0.0):
+    - PureLayout (~> 3.1.6)
+  - PureLayout (3.1.6)
 
 DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
   - ORCommonUI-Swift (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
+    - FBSnapshotTestCase
     - PureLayout
 
 EXTERNAL SOURCES:
@@ -15,9 +22,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ORCommonUI-Swift: 6cc029c3bd02b700e6c375cb028087b858a92518
-  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  ORCommonUI-Swift: 2141ff18f1b04157fba6e9e43bb557833ee2b1f7
+  PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
 
-PODFILE CHECKSUM: c1a7e4ec90bec821daefdc23706a32cb5e39369e
+PODFILE CHECKSUM: 2bd08f93f18beb295d42a002a9459036b7598eeb
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.8.3

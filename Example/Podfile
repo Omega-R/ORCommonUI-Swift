@@ -1,16 +1,13 @@
-source 'https://bitbucket.org/omegarinc/cocoapods-specs.git' # private spec repo
-source 'https://github.com/CocoaPods/Specs.git' # master cocoapods spec repo
-
-platform :ios, '10.0'
 use_frameworks!
+
+platform :ios, '9.0'
 
 target 'ORCommonUI-Swift_Example' do
   pod 'ORCommonUI-Swift', :path => '../'
-end
 
-target 'ORCommonUI-Swift_Tests' do
-  pod 'ORCommonUI-Swift', :path => '../'
+  target 'ORCommonUI-Swift_Tests' do
+    inherit! :search_paths
 
-# pod 'ORCommonCode-Swift', '~> 3.0.0'
-
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
 end
