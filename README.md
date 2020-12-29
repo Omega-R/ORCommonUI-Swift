@@ -1,6 +1,6 @@
 # ORCommonUI-Swift
 
-[![CI Status](https://img.shields.io/travis/Egor Lindberg/ORCommonUI-Swift.svg?style=flat)](https://travis-ci.org/Egor Lindberg/ORCommonUI-Swift)
+[![CI Status](https://img.shields.io/travis/Egor%20Lindberg/ORCommonUI-Swift.svg?style=flat)](https://travis-ci.org/Egor%20Lindberg/ORCommonUI-Swift)
 [![Version](https://img.shields.io/cocoapods/v/ORCommonUI-Swift.svg?style=flat)](https://cocoapods.org/pods/ORCommonUI-Swift)
 [![License](https://img.shields.io/cocoapods/l/ORCommonUI-Swift.svg?style=flat)](https://cocoapods.org/pods/ORCommonUI-Swift)
 [![Platform](https://img.shields.io/cocoapods/p/ORCommonUI-Swift.svg?style=flat)](https://cocoapods.org/pods/ORCommonUI-Swift)
