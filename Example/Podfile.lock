@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - ORCommonUI-Swift (6.0.0):
+  - ORCommonUI-Swift (6.0.1):
     - PureLayout (~> 3.1.6)
   - PureLayout (3.1.6)
 
@@ -23,9 +23,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  ORCommonUI-Swift: 2141ff18f1b04157fba6e9e43bb557833ee2b1f7
+  ORCommonUI-Swift: 93fcdab5032700004196b0921aae3e480758164e
   PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
 
 PODFILE CHECKSUM: 2bd08f93f18beb295d42a002a9459036b7598eeb
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.11.2
