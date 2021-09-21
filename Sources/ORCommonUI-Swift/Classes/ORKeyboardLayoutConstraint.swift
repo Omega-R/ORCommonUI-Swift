@@ -10,11 +10,11 @@ import UIKit
 
 open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
     
-    fileprivate var kKeyCalculatedConstant: String = ""
+    fileprivate var kKeyCalculatedConstant = ""
     open var originalOffset: CGFloat = 0
     
-    @IBInspectable var useCustomOffsetWhenKeyboardIsShown: Bool = false
-    @IBInspectable var customOffset: CGFloat = 0
+    @IBInspectable public var useCustomOffsetWhenKeyboardIsShown = false
+    @IBInspectable public var customOffset: CGFloat = 0
     
     // MARK: - Object lifecycle
     
@@ -78,7 +78,7 @@ open class ORKeyboardLayoutConstraint: NSLayoutConstraint {
                         topView = superview
                     }
                     topView.layoutIfNeeded()
-            },
+                },
                 completion: nil)
         }
     }
